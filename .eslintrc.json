@@ -1,0 +1,27 @@
+{
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module"
+	},
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true
+	},
+	"extends": "eslint:recommended",
+	"rules": {
+		"no-console": ["warn", {"allow": ["warn", "error"] }],
+		"no-var": "warn",
+		"eqeqeq": "warn",
+		"semi": ["warn", "always"],
+		"no-spaced-func": "warn",
+		"comma-style": "warn",
+		"comma-spacing": "warn",
+		"key-spacing": "warn"
+	},
+	"plugins": [
+		"html",
+		"flowtype"
+	]
+}

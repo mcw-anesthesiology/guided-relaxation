@@ -1,0 +1,44 @@
+{
+	"presets": [
+		"@babel/preset-flow"
+	],
+	"plugins": [
+		["module-resolver", {
+			"alias": {
+				"@": "./src",
+				"@assets": "./assets"
+			}
+		}],
+		"@babel/plugin-syntax-dynamic-import"
+	],
+	"env": {
+		"client": {
+			"presets": [
+				["@babel/preset-env", {
+					"targets": {
+						"browsers": [
+							"> 1%",
+							"last 2 versions",
+							"ie >= 9"
+						]
+					},
+					"useBuiltIns": "usage",
+					"debug": false,
+					"modules": false
+				}]
+			]
+		},
+		"server": {
+			"presets": [
+				["@babel/preset-env", {
+					"targets": {
+						"node": "current"
+					},
+					"useBuiltIns": "usage",
+					"debug": false,
+					"modules": false
+				}]
+			]
+		}
+	}
+}

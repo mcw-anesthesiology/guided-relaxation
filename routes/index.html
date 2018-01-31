@@ -1,0 +1,34 @@
+<:Head>
+	<title>Sapper project template</title>
+</:Head>
+
+<Layout page="home">
+	<nav>
+		<ol>
+			{{#each tracks as track}}
+				<li>
+					<a href="{{`/track/${track.id}`}}">
+						{{track.name}}
+					</a>
+				</li>
+			{{/each}}
+		</ol>
+	</nav>
+</Layout>
+
+<script>
+	import Layout from '@/components/Layout.html';
+
+	import tracks from '@assets/tracks.json';
+
+	export default {
+		data() {
+			return {
+				tracks
+			};
+		},
+		components: {
+			Layout
+		}
+	};
+</script>

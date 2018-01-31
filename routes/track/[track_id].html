@@ -1,0 +1,29 @@
+<Layout>
+	<header>
+		<a href="/">Home</a>
+	</header>
+	<h1>
+		{{name}}
+	</h1>
+
+	<AudioPlayer src="{{path}}" />
+
+	{{image}}
+</Layout>
+
+<script>
+	import Layout from '@/components/Layout.html';
+	import AudioPlayer from '@/components/AudioPlayer.html';
+
+	import tracks from '@assets/tracks.json';
+
+	export default {
+		preload({ params: { track_id }}) {
+			return tracks.find(t => t.id === Number(track_id));
+		},
+		components: {
+			Layout,
+			AudioPlayer
+		}
+	};
+</script>

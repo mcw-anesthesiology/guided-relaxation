@@ -1,0 +1,64 @@
+<audio ref:audio src="{{src}}" bind:currentTime bind:duration bind:paused>
+	Your browser does not support the <code>audio</code> element.
+</audio>
+
+<button type="button" on:click="set({paused: !paused})">
+	{{paused ? 'Play' : 'Pause'}}
+</button>
+
+<div class="volume-container">
+	<input type="range" class="volume"
+		min="0" max="100"
+		bind:value="volume" />
+</div>
+
+<div class="controls-container">
+	<div class="timestamps-container">
+		<span>{{audioTimestamp(currentTime)}}</span>
+		<span>{{audioTimestamp(duration)}}</span>
+	</div>
+	<input type="range" class="scrubber"
+		min="0" max="{{Number(duration)}}"
+		bind:value="currentTime" />
+</div>
+
+<style>
+	.timestamps-container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.volume {
+		/* transform-origin: top left;
+		transform: rotate(-90deg); */
+	}
+
+	.scrubber {
+		width: 100%;
+		margin: 0;
+		display: block;
+	}
+</style>
+
+<script>
+	import { audioTimestamp } from '@/formatters.js';
+
+	export default {
+		data() {
+			return {
+				paused: true,
+				currentTime: 0,
+				duration: 0,
+				volume: 75
+			};
+		},
+		oncreate() {
+			this.observe('volume', volume => {
+				this.refs.audio.volume = Number(volume / 100);
+			});
+		},
+		helpers: {
+			audioTimestamp
+		}
+	};
+</script>

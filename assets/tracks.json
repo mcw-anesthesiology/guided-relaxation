@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"name": "Autogenic Relaxation",
+		"path": "/tracks/Autogenic Relaxation.mp3",
+		"image": ""
+	},
+	{
+		"id": 2,
+		"name": "Brief imagery",
+		"path": "/tracks/Brief imagery.mp3",
+		"image": ""
+	},
+	{
+		"id": 3,
+		"name": "Forest",
+		"path": "/tracks/Forest.mp3",
+		"image": ""
+	},
+	{
+		"id": 4,
+		"name": "Meadow",
+		"path": "/tracks/Meadow.mp3",
+		"image": ""
+	},
+	{
+		"id": 5,
+		"name": "5 Sensory Mindfulness Practice",
+		"path": "/tracks/5 Sensory Mindfulness Practice.mp3",
+		"image": ""
+	}
+]
