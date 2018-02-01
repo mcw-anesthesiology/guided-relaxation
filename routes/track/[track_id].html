@@ -1,19 +1,62 @@
 <Layout>
 	<header>
-		<a href="/">Home</a>
+		<a href="/">
+			<FeatherIcon icon="home" />
+			Home
+		</a>
 	</header>
-	<h1>
-		{{name}}
-	</h1>
+	<h1>{{name}}</h1>
+	<Backdrop src="{{image}}" />
+
+	<div class="main"></div>
 
 	<AudioPlayer src="{{path}}" />
-
-	{{image}}
 </Layout>
+
+<style>
+	header {
+		padding: 1em;
+	}
+
+	a {
+		font-weight: 700;
+		text-decoration: none;
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	a:hover {
+		color: white;
+	}
+
+	a :global(.feather) {
+		vertical-align: bottom;
+	}
+
+	h1 {
+		margin: 2em;
+		color: white;
+		font-weight: 700;
+	}
+
+	.main {
+		flex-grow: 1;
+	}
+
+	:global(.audio-player) {
+		color: white;
+	}
+
+	:global(.audio-player .feather) {
+		stroke: white;
+		fill: white;
+	}
+</style>
 
 <script>
 	import Layout from '@/components/Layout.html';
 	import AudioPlayer from '@/components/AudioPlayer.html';
+	import Backdrop from '@/components/Backdrop.html';
+	import FeatherIcon from 'svelte-feather-icon';
 
 	import tracks from '@assets/tracks.json';
 
@@ -23,7 +66,9 @@
 		},
 		components: {
 			Layout,
-			AudioPlayer
+			AudioPlayer,
+			Backdrop,
+			FeatherIcon
 		}
 	};
 </script>

@@ -1141,6 +1141,10 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
+classnames@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
+
 cli-cursor@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cli-cursor/-/cli-cursor-2.1.0.tgz#b35dac376479facc3e94747d41d0d0f5238ffcb5"
@@ -1697,6 +1701,10 @@ duplexify@^3.4.2, duplexify@^3.5.3:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
+eases-jsnext@^1.0.9:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/eases-jsnext/-/eases-jsnext-1.0.10.tgz#384fcf75058093dc65d6a52afada56b9e1fd5c7d"
+
 ecc-jsbn@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
@@ -2104,6 +2112,12 @@ fastparse@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.1.tgz#d1e2643b38a94d7583b479060e6c4affc94071f8"
 
+feather-icons@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/feather-icons/-/feather-icons-4.5.0.tgz#5c0a38fe4633e88a14cc8d7aa822e2591828027d"
+  dependencies:
+    classnames "^2.2.5"
+
 figures@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/figures/-/figures-2.0.0.tgz#3ab1a2d2a62c8bfb431a0c94cb797a2fce27c962"
@@ -2116,6 +2130,13 @@ file-entry-cache@^2.0.0:
   dependencies:
     flat-cache "^1.2.1"
     object-assign "^4.0.1"
+
+file-loader@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-1.1.6.tgz#7b9a8f2c58f00a77fddf49e940f7ac978a3ea0e8"
+  dependencies:
+    loader-utils "^1.0.2"
+    schema-utils "^0.3.0"
 
 filename-regex@^2.0.0:
   version "2.0.1"
@@ -4693,9 +4714,9 @@ sander@^0.6.0:
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-sapper@^0.5.0:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.5.1.tgz#47c0d0e121b13112091d20b50015961b0373b769"
+sapper@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.5.0.tgz#f6259870af26ceadfd336e9070c00e289d5a5d75"
   dependencies:
     chalk "^2.3.0"
     cheerio "^1.0.0-rc.2"
@@ -5044,12 +5065,42 @@ supports-color@^5.1.0:
   dependencies:
     has-flag "^2.0.0"
 
+svelte-feather-icon@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/svelte-feather-icon/-/svelte-feather-icon-0.1.3.tgz#bf82adfec45ea12aee0a43cc46a0e9d3d33a4968"
+  dependencies:
+    feather-icons "^4.5.0"
+
 svelte-loader@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/svelte-loader/-/svelte-loader-2.3.3.tgz#62a4074151bfa6277f875e5ad7f1f0fa2637fb4f"
   dependencies:
     loader-utils "^1.1.0"
     tmp "0.0.31"
+
+svelte-transitions-fade@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/svelte-transitions-fade/-/svelte-transitions-fade-1.0.0.tgz#dbe1520df1f5b5370bd61afefc67f2d2fff63303"
+
+svelte-transitions-fly@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/svelte-transitions-fly/-/svelte-transitions-fly-1.0.2.tgz#08fd366941b4b929a92f9635b90243a586c2b8d7"
+  dependencies:
+    eases-jsnext "^1.0.9"
+
+svelte-transitions-slide@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/svelte-transitions-slide/-/svelte-transitions-slide-1.0.0.tgz#150dd9cb8e79fa9e2f250e198c7d69960bf21994"
+  dependencies:
+    eases-jsnext "^1.0.9"
+
+svelte-transitions@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/svelte-transitions/-/svelte-transitions-1.1.1.tgz#01a2e954f3a74d71fc76d3a7dd29fdd155510810"
+  dependencies:
+    svelte-transitions-fade "^1.0.0"
+    svelte-transitions-fly "^1.0.1"
+    svelte-transitions-slide "^1.0.0"
 
 svelte@^1.51.1:
   version "1.54.0"
@@ -5192,6 +5243,10 @@ type-is@~1.6.15:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
+
+typeface-comfortaa@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-comfortaa/-/typeface-comfortaa-0.0.54.tgz#b36c2c98e29c96a895b93e6b61854e9770cea429"
 
 uglify-es@^3.3.4:
   version "3.3.9"

@@ -43,13 +43,6 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: 'ignore-loader'
-			},
-			{
-				test: /\.js$/,
-				include: [
-					/bootstrap/
-				],
-				use: 'ignore-loader'
 			}
 		]
 	},

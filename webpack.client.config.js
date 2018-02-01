@@ -89,6 +89,16 @@ module.exports = {
 						}
 					]
 				})
+			},
+			{
+				test: /\.(eot|svg|ttf|woff|woff2)$/,
+				include: /node_modules/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						name: 'assets/[name].[ext]'
+					}
+				}
 			}
 		].filter(Boolean)
 	},

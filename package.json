@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "run-s rm watch",
     "watch": "node server.js",
-    "build": "sapper build",
-    "start": "NODE_ENV=production node server.js",
+    "build": "sapper export",
     "rm": "rm -rf .sapper/ && rm -f assets/main.css && rm -f templates/.main.rendered.js"
   },
   "dependencies": {
@@ -14,9 +13,12 @@
     "express": "^4.16.2",
     "glob": "^7.1.2",
     "node-fetch": "^1.7.3",
-    "sapper": "^0.5.0",
+    "sapper": "0.5.0",
     "serve-static": "^1.13.1",
-    "svelte": "^1.51.1"
+    "svelte": "^1.51.1",
+    "svelte-feather-icon": "^0.1.3",
+    "svelte-transitions": "^1.1.1",
+    "typeface-comfortaa": "^0.0.54"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.37",
@@ -32,6 +34,7 @@
     "eslint-plugin-flowtype": "^2.41.0",
     "eslint-plugin-html": "^4.0.1",
     "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
     "flow-bin": "^0.63.1",
     "flow-typed": "^2.2.3",
     "ignore-loader": "^0.1.2",

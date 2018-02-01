@@ -1,39 +1,120 @@
-<audio ref:audio src="{{src}}" bind:currentTime bind:duration bind:paused>
-	Your browser does not support the <code>audio</code> element.
-</audio>
+<div class="audio-player">
+	<audio ref:audio src="{{src}}" bind:currentTime bind:duration bind:paused>
+		Your browser does not support the <code>audio</code> element.
+	</audio>
 
-<button type="button" on:click="set({paused: !paused})">
-	{{paused ? 'Play' : 'Pause'}}
-</button>
 
-<div class="volume-container">
-	<input type="range" class="volume"
-		min="0" max="100"
-		bind:value="volume" />
-</div>
+	<div class="controls-container">
+		<button type="button" class="play-button {{began ? '' : 'large'}}"
+				on:click="set({paused: !paused})">
+			<FeatherIcon icon={{paused ? 'play' : 'pause'}} />
+		</button>
 
-<div class="controls-container">
-	<div class="timestamps-container">
-		<span>{{audioTimestamp(currentTime)}}</span>
-		<span>{{audioTimestamp(duration)}}</span>
+		<div class="volume-container">
+			<button type="button" on:click="set({volume: 0})">
+				<FeatherIcon icon="volume-1" />
+			</button>
+			<input type="range" class="volume"
+				min="0" max="100"
+				bind:value="volume" />
+			<button type="button" on:click="set({volume: 100})">
+				<FeatherIcon icon="volume-2" />
+			</button>
+		</div>
+
+		<div class="scrubber-container">
+			<div class="timestamps-container">
+				<span>{{audioTimestamp(currentTime)}}</span>
+				<span>{{audioTimestamp(duration)}}</span>
+			</div>
+			<input type="range" class="scrubber"
+				min="0" max="{{Number(duration)}}"
+				bind:value="currentTime" />
+		</div>
+
 	</div>
-	<input type="range" class="scrubber"
-		min="0" max="{{Number(duration)}}"
-		bind:value="currentTime" />
 </div>
 
 <style>
+	.audio-player {
+		padding: 0.5em;
+	}
+
+	button {
+		background: none;
+		border: none;
+	}
+
+	button :global(.feather) {
+		vertical-align: middle;
+	}
+
+	.play-button {
+		cursor: pointer;
+		transition-duration: 0.15s;
+		transition-timing-function: ease;
+		transition-property: transform top left;
+	}
+
+	@media (min-width: 750px) {
+		.play-button.large {
+			transform: translate(50vw, -50vh) translate(-50%, -50%) scale(3);
+		}
+	}
+
+	@media (max-width: 749px) {
+		.play-button.large {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(3);
+		}
+	}
+
+	.controls-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: flex-end;
+	}
+
+	.volume-container {
+		flex-shrink: 1;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 0.5em;
+	}
+
+	.volume-container :global(.feather) {
+		width: 0.85em;
+		height: 0.85em;
+		margin: 0 0.5em;
+	}
+
+	.volume {
+		flex-grow: 1;
+		flex-shrink: 1;
+		width: 150px;
+		margin: 0;
+	}
+
+	.scrubber-container {
+		flex-grow: 1;
+		width: 400px;
+		max-width: 100%;
+		padding: 0 0.25em;
+	}
+
 	.timestamps-container {
 		display: flex;
 		justify-content: space-between;
 	}
 
-	.volume {
-		/* transform-origin: top left;
-		transform: rotate(-90deg); */
-	}
-
 	.scrubber {
+		box-sizing: border-box;
 		width: 100%;
 		margin: 0;
 		display: block;
@@ -41,6 +122,8 @@
 </style>
 
 <script>
+	import FeatherIcon from 'svelte-feather-icon';
+
 	import { audioTimestamp } from '@/formatters.js';
 
 	export default {
@@ -53,12 +136,45 @@
 			};
 		},
 		oncreate() {
+			const src = this.get('src');
+			const volume = localStorage.getItem(`volume`);
+			if (volume !== undefined) {
+				this.refs.audio.volume = Number(volume / 100);
+				this.set({volume});
+			}
+
+			const currentTime = localStorage.getItem(`track.${src}.currentTime`);
+			if (currentTime !== undefined)
+				this.set({currentTime});
+
 			this.observe('volume', volume => {
 				this.refs.audio.volume = Number(volume / 100);
+
+				if (volume !== undefined) {
+					localStorage.setItem(`volume`, volume);
+				}
+			}, { init: false });
+
+			this.observe('currentTime', currentTime => {
+				if (currentTime !== undefined) {
+					const src = this.get('src');
+					localStorage.setItem(`track.${src}.currentTime`, currentTime);
+				}
+			}, { init: false });
+
+			this.observe('paused', paused => {
+				if (!paused && !this.get('began'))
+					this.set({began: true});
 			});
+		},
+		ondestroy() {
+			this.refs.audio.pause();
 		},
 		helpers: {
 			audioTimestamp
+		},
+		components: {
+			FeatherIcon
 		}
 	};
 </script>
