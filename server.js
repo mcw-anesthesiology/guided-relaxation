@@ -1,4 +1,3 @@
-const fs = require('fs');
 const app = require('express')();
 const compression = require('compression');
 const sapper = require('sapper');
@@ -16,6 +15,7 @@ global.fetch = (url, opts) => {
 app.use(compression({ threshold: 0 }));
 
 app.use(serveStatic('assets'));
+app.use('/assets', serveStatic('assets'));
 
 app.use(sapper());
 

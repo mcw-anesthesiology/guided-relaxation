@@ -96,7 +96,7 @@ module.exports = {
 				use: {
 					loader: 'file-loader',
 					options: {
-						name: 'assets/[name].[ext]'
+						name: '../../assets/build/[hash].[ext]'
 					}
 				}
 			}
@@ -111,7 +111,7 @@ module.exports = {
 	].concat(isDev ? [
 		new webpack.HotModuleReplacementPlugin()
 	] : [
-		new ExtractTextPlugin('../../assets/main.css'),
+		new ExtractTextPlugin('../../assets/build/main.css'),
 		new webpack.optimize.ModuleConcatenationPlugin(),
 		new UglifyJSPlugin()
 	]).filter(Boolean),
