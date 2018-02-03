@@ -1,3 +1,5 @@
+<:Window on:keypress="handleKeypress(event)" />
+
 <div class="audio-player">
 	<audio ref:audio src="{{src}}" bind:currentTime bind:duration bind:paused>
 		Your browser does not support the <code>audio</code> element.
@@ -36,6 +38,65 @@
 
 	</div>
 </div>
+
+<script>
+	import FeatherIcon from 'svelte-feather-icon';
+
+	import { audioTimestamp } from '@/formatters.js';
+
+	export default {
+		data() {
+			return {
+				paused: true,
+				began: false,
+				currentTime: 0,
+				duration: 0,
+				volume: 75
+			};
+		},
+		oncreate() {
+			this.observe('volume', volume => {
+				this.refs.audio.volume = Number(volume / 100);
+			});
+
+			this.observe('paused', paused => {
+				if (!paused && !this.get('began'))
+					this.set({began: true});
+			});
+		},
+		ondestroy() {
+			this.refs.audio.pause();
+		},
+		helpers: {
+			audioTimestamp
+		},
+		methods: {
+			handleKeypress(event) {
+				if (event.defaultPrevented)
+					return;
+
+				switch (event.key) {
+					case ' ':
+						this.set({paused: !this.get('paused')});
+						break;
+					case 'ArrowUp':
+						this.set({
+							volume: Math.min(100, this.get('volume') + 10)
+						});
+						break;
+					case 'ArrowDown':
+						this.set({
+							volume: Math.max(0, this.get('volume') - 10)
+						});
+						break;
+				}
+			}
+		},
+		components: {
+			FeatherIcon
+		}
+	};
+</script>
 
 <style>
 	input[type="range"] {
@@ -188,40 +249,3 @@
 		display: block;
 	}
 </style>
-
-<script>
-	import FeatherIcon from 'svelte-feather-icon';
-
-	import { audioTimestamp } from '@/formatters.js';
-
-	export default {
-		data() {
-			return {
-				paused: true,
-				began: false,
-				currentTime: 0,
-				duration: 0,
-				volume: 75
-			};
-		},
-		oncreate() {
-			this.observe('volume', volume => {
-				this.refs.audio.volume = Number(volume / 100);
-			});
-
-			this.observe('paused', paused => {
-				if (!paused && !this.get('began'))
-					this.set({began: true});
-			});
-		},
-		ondestroy() {
-			this.refs.audio.pause();
-		},
-		helpers: {
-			audioTimestamp
-		},
-		components: {
-			FeatherIcon
-		}
-	};
-</script>
