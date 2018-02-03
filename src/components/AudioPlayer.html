@@ -198,39 +198,16 @@
 		data() {
 			return {
 				paused: true,
+				began: false,
 				currentTime: 0,
 				duration: 0,
 				volume: 75
 			};
 		},
 		oncreate() {
-			const src = this.get('src');
-			const volume = localStorage.getItem(`volume`);
-			if (volume !== undefined) {
-				this.refs.audio.volume = Number(volume / 100);
-				this.set({volume});
-			}
-
 			this.observe('volume', volume => {
 				this.refs.audio.volume = Number(volume / 100);
-
-				if (volume !== undefined) {
-					localStorage.setItem(`volume`, volume);
-				}
 			});
-
-			if ('localStorage' in window) {
-				const currentTime = localStorage.getItem(`track.${src}.currentTime`);
-				if (currentTime !== undefined)
-					this.set({currentTime});
-
-				this.observe('currentTime', currentTime => {
-					if (currentTime !== undefined) {
-						const src = this.get('src');
-						localStorage.setItem(`track.${src}.currentTime`, currentTime);
-					}
-				}, { init: false });
-			}
 
 			this.observe('paused', paused => {
 				if (!paused && !this.get('began'))
