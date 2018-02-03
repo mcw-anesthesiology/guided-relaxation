@@ -6,7 +6,7 @@
 		</a>
 	</header>
 	<h1>{{name}}</h1>
-	<Backdrop src="{{image}}" />
+	<Backdrop src="{{currentImage.src}}" srcset="{{currentImage.srcset}}" />
 
 	<div class="main"></div>
 
@@ -60,9 +60,62 @@
 
 	import tracks from '@assets/tracks.json';
 
+	import { observeMany } from 'svelte-extras';
+
 	export default {
+		data() {
+			return {
+				imageChangeInterval: 1 * 60 * 1000
+			};
+		},
 		preload({ params: { track_id }}) {
-			return tracks.find(t => t.id === Number(track_id));
+			const track = tracks.find(t => t.id === Number(track_id));
+			track.imagesIndex = track.images
+				? Math.floor(Math.random() * track.images.length)
+				: 0;
+
+			return track;
+		},
+		oncreate() {
+			this.observeMany(
+				['images', 'imageChangeInterval'],
+				([images, imageChangeInterval]) => {
+					if (this.imagesInterval) {
+						clearInterval(this.imagesInterval);
+						this.imagesInterval = null;
+					}
+
+					if (images && images.length > 1) {
+						this.imagesInterval = setInterval(() => {
+							this.set({
+								imagesIndex: (this.get('imagesIndex') + 1) % images.length
+							});
+						}, imageChangeInterval);
+					}
+				}
+			);
+		},
+		ondestroy() {
+			if (this.imagesInterval)
+				clearInterval(this.imagesInterval);
+		},
+		computed: {
+			currentImage(image, images, imagesIndex) {
+				if (images) {
+					if (imagesIndex == null)
+						imagesIndex = Math.floor(Math.random() * images.length);
+
+					return images[imagesIndex];
+				}
+
+				if (image)
+					return image;
+
+				return {};
+			}
+		},
+		methods: {
+			observeMany
 		},
 		components: {
 			Layout,

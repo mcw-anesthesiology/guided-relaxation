@@ -5,21 +5,23 @@
 
 
 	<div class="controls-container">
-		<button type="button" class="play-button {{began ? '' : 'large'}}"
-				on:click="set({paused: !paused})">
-			<FeatherIcon icon={{paused ? 'play' : 'pause'}} />
-		</button>
+		<div class="play-volume-container">
+			<button type="button" class="play-button {{began ? '' : 'large'}}"
+					on:click="set({paused: !paused})">
+				<FeatherIcon icon={{paused ? 'play' : 'pause'}} />
+			</button>
 
-		<div class="volume-container">
-			<button type="button" on:click="set({volume: 0})">
-				<FeatherIcon icon="volume-1" />
-			</button>
-			<input type="range" class="volume"
-				min="0" max="100"
-				bind:value="volume" />
-			<button type="button" on:click="set({volume: 100})">
-				<FeatherIcon icon="volume-2" />
-			</button>
+			<div class="volume-container">
+				<button type="button" on:click="set({volume: 0})">
+					<FeatherIcon icon="volume-1" />
+				</button>
+				<input type="range" class="volume"
+					min="0" max="100"
+					bind:value="volume" />
+				<button type="button" on:click="set({volume: 100})">
+					<FeatherIcon icon="volume-2" />
+				</button>
+			</div>
 		</div>
 
 		<div class="scrubber-container">
@@ -36,6 +38,65 @@
 </div>
 
 <style>
+	input[type="range"] {
+		-webkit-appearance: none;
+		padding: 0.5em 0;
+		background: transparent;
+	}
+
+	input[type="range"]::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		border: 1px solid white;
+		width: 10px;
+		height: 10px;
+		border-radius: 100%;
+		background: #f0f0f0;
+		box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+		margin-top: -4px;
+	}
+
+	input[type="range"]::-moz-range-thumb {
+		border: 1px solid white;
+		width: 10px;
+		height: 10px;
+		border-radius: 100%;
+		background: #f0f0f0;
+		box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+	}
+
+	input[type="range"]::-ms-thumb {
+		border: 1px solid white;
+		width: 10px;
+		height: 10px;
+		border-radius: 100%;
+		background: #f0f0f0;
+		box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+	}
+
+	input[type=range]::-webkit-slider-runnable-track {
+		width: 100%;
+		background: white;
+		height: 2px;
+		border-color: transparent;
+		color: transparent;
+	}
+
+	input[type=range]::-moz-range-track {
+		width: 100%;
+		background: white;
+		height: 2px;
+		border-color: transparent;
+		color: transparent;
+	}
+
+	input[type="range"]::-ms-track {
+		width: 100%;
+		background: white;
+		height: 2px;
+		border-color: transparent;
+		color: transparent;
+	}
+
 	.audio-player {
 		padding: 0.5em;
 	}
@@ -76,6 +137,13 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: flex-end;
+	}
+
+	.play-volume-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.volume-container {
@@ -143,24 +211,26 @@
 				this.set({volume});
 			}
 
-			const currentTime = localStorage.getItem(`track.${src}.currentTime`);
-			if (currentTime !== undefined)
-				this.set({currentTime});
-
 			this.observe('volume', volume => {
 				this.refs.audio.volume = Number(volume / 100);
 
 				if (volume !== undefined) {
 					localStorage.setItem(`volume`, volume);
 				}
-			}, { init: false });
+			});
 
-			this.observe('currentTime', currentTime => {
-				if (currentTime !== undefined) {
-					const src = this.get('src');
-					localStorage.setItem(`track.${src}.currentTime`, currentTime);
-				}
-			}, { init: false });
+			if ('localStorage' in window) {
+				const currentTime = localStorage.getItem(`track.${src}.currentTime`);
+				if (currentTime !== undefined)
+					this.set({currentTime});
+
+				this.observe('currentTime', currentTime => {
+					if (currentTime !== undefined) {
+						const src = this.get('src');
+						localStorage.setItem(`track.${src}.currentTime`, currentTime);
+					}
+				}, { init: false });
+			}
 
 			this.observe('paused', paused => {
 				if (!paused && !this.get('began'))

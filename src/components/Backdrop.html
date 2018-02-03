@@ -1,8 +1,13 @@
-{{#if src}}
-	<img class="backdrop" src="{{src}}" alt="" />
-{{else}}
-	<div class="backdrop"></div>
-{{/if}}
+<div class="backdrop">
+	{{#if currentSrc || currentSrcset}}
+		<div class="image-container" style="opacity: {{opacity}};">
+			<img ref:img src="{{currentSrc}}" srcset="{{currentSrcset}}"
+				alt="{{alt}}"
+				on:load="set({opacity: 100})" />
+			<div class="backdrop-cover"></div>
+		</div>
+	{{/if}}
+</div>
 
 <style>
 	.backdrop {
@@ -13,8 +18,76 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		z-index: -1;
-		object-fit: cover;
+		z-index: -100;
 		background-color: rgb(10, 7, 27);
 	}
+
+	.backdrop * {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.image-container {
+		opacity: 0;
+		transition: opacity 1s ease;
+	}
+
+	img {
+		object-fit: cover;
+		z-index: -1;
+	}
+
+	.backdrop-cover {
+		background: rgba(0, 0, 0, 0.75);
+	}
 </style>
+
+<script>
+	import { observeMany } from 'svelte-extras';
+
+	export default {
+		data() {
+			return {
+				opacity: 0,
+				currentSrc: null,
+				currentSrcset: null
+			};
+		},
+		oncreate() {
+			const { src, srcset } = this.get();
+			this.set({
+				currentSrc: src,
+				currentSrcset: srcset
+			});
+
+			this.observeMany(['src', 'srcset'], ([src, srcset], [oldSrc, oldSrcset]) => {
+				if (oldSrc || oldSrcset)
+					this.set({opacity: 0});
+
+				if (this.srcTimeout)
+					clearTimeout(this.srcTimeout);
+
+				this.srcTimeout = setTimeout(() => {
+					this.set({
+						currentSrc: src,
+						currentSrcset: srcset
+					});
+				}, 1500);
+			}, { init: false });
+		},
+		ondestroy() {
+			this.set({opacity: 0});
+
+			if (this.srcTimeout)
+				clearTimeout(this.srcTimeout);
+		},
+		methods: {
+			observeMany
+		}
+	};
+</script>
