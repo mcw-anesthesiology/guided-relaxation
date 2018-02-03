@@ -6,7 +6,8 @@
     "dev": "run-s rm watch",
     "watch": "node server.js",
     "build": "sapper export && mkdir dist/assets && mv dist/build dist/assets/build",
-    "rm": "rm -rf .sapper/ && rm -rf assets/build/ && rm -f templates/.main.rendered.js"
+    "rm": "rm -rf .sapper/ && rm -rf assets/build/ && rm -f templates/.main.rendered.js",
+    "deploy": "now dist/ -A ../now.json"
   },
   "dependencies": {
     "compression": "^1.7.1",
