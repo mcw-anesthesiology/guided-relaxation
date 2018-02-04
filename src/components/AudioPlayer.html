@@ -1,7 +1,8 @@
 <:Window on:keypress="handleKeypress(event)" />
 
 <div class="audio-player">
-	<audio ref:audio src="{{src}}" bind:currentTime bind:duration bind:paused>
+	<audio src="{{src}}" bind:currentTime bind:duration bind:paused
+			volume="{{volume / 100}}">
 		Your browser does not support the <code>audio</code> element.
 	</audio>
 
@@ -55,17 +56,13 @@
 			};
 		},
 		oncreate() {
-			this.observe('volume', volume => {
-				this.refs.audio.volume = Number(volume / 100);
-			});
-
 			this.observe('paused', paused => {
 				if (!paused && !this.get('began'))
 					this.set({began: true});
 			});
 		},
 		ondestroy() {
-			this.refs.audio.pause();
+			this.set({paused: true});
 		},
 		helpers: {
 			audioTimestamp
@@ -103,6 +100,7 @@
 		-webkit-appearance: none;
 		padding: 0.5em 0;
 		background: transparent;
+		border: none;
 	}
 
 	input[type="range"]::-webkit-slider-thumb {

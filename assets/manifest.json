@@ -1,8 +1,8 @@
 {
 	"background_color": "#ffffff",
-	"theme_color": "#aa1e1e",
-	"name": "TODO",
-	"short_name": "TODO",
+	"theme_color": "#282146",
+	"name": "Guided relaxation",
+	"short_name": "Guided relaxation",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [
