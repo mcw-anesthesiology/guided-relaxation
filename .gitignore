@@ -4,3 +4,4 @@ node_modules/
 dist/
 templates/.*
 assets/build/
+app/manifest/

@@ -3,16 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<meta name="theme-color" content="#282146">
+	<meta name="theme-color" content="#aa1e1e">
 
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 	<link rel="stylesheet" href="/assets/build/main.css" />
 
 	<script>
-		if ("serviceWorker" in navigator) {
-			navigator.serviceWorker.register("/service-worker.js");
-		}
+		// if ('serviceWorker' in navigator) {
+		// 	navigator.serviceWorker.register('/service-worker.js');
+		// }
 	</script>
 
 	<!-- Sapper generates a <style> tag containing critical CSS
@@ -27,7 +27,7 @@
 <body>
 	<!-- The application will be rendered inside this element,
 	     because `templates/main.js` references it -->
-	<div id="sapper">%sapper.html%</div>
+	<div id='sapper'>%sapper.html%</div>
 
 	<!-- Sapper creates a <script> tag containing `templates/main.js`
 	     and anything else it needs to hydrate the app and
