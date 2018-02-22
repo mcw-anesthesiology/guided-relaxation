@@ -14,9 +14,18 @@ type BaseImage = {
 
 type Image = BaseImage & (SrcImage | SrcsetImage);
 
+type ID = number | string;
+
 export type Track = {
+	id: ID,
 	name: string,
 	path: string,
 	image?: Image,
 	images?: Array<Image>
+};
+
+export type Tracklist = {
+	id: ID,
+	name: string,
+	tracks: Array<Track>
 };

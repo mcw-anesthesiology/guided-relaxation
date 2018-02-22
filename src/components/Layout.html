@@ -1,4 +1,10 @@
-<main transition:fly="{x: 20}">
+<main data-page="{{page}}">
+	{{#if page !== 'home'}}
+		<nav>
+			<HomeButton />
+		</nav>
+	{{/if}}
+
 	<slot></slot>
 </main>
 
@@ -19,16 +25,20 @@
 		height: 100%;
 		width: 100%;
 	}
+
+	nav {
+		padding: 1em;
+	}
 </style>
 
 <script>
-	import { fly } from 'svelte-transitions';
-
 	import 'typeface-comfortaa';
 
+	import HomeButton from './HomeButton.html';
+
 	export default {
-		transitions: {
-			fly
+		components: {
+			HomeButton
 		}
 	};
 </script>

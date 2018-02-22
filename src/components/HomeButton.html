@@ -1,0 +1,30 @@
+<a href="/">
+	<FeatherIcon icon="home" />
+	Home
+</a>
+
+<style>
+	a {
+		font-weight: 700;
+		text-decoration: none;
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	a:hover {
+		color: white;
+	}
+
+	a :global(.feather) {
+		vertical-align: bottom;
+	}
+</style>
+
+<script>
+	import FeatherIcon from 'svelte-feather-icon';
+
+	export default {
+		components: {
+			FeatherIcon
+		}
+	};
+</script>

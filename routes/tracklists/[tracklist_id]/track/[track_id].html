@@ -1,10 +1,8 @@
+<:Head>
+	<title>{{name}} - {{tracklist.name}} - Guided relaxation</title>
+</:Head>
+
 <Layout>
-	<header>
-		<a href="/">
-			<FeatherIcon icon="home" />
-			Home
-		</a>
-	</header>
 	<h1>{{name}}</h1>
 	<Backdrop src="{{currentImage.src}}" srcset="{{currentImage.srcset}}" />
 
@@ -14,10 +12,6 @@
 </Layout>
 
 <style>
-	header {
-		padding: 1em;
-	}
-
 	a {
 		font-weight: 700;
 		text-decoration: none;
@@ -56,9 +50,8 @@
 	import Layout from '@/components/Layout.html';
 	import AudioPlayer from '@/components/AudioPlayer.html';
 	import Backdrop from '@/components/Backdrop.html';
-	import FeatherIcon from 'svelte-feather-icon';
 
-	import tracks from '@assets/tracks.json';
+	import tracklists from '@assets/tracklists.json';
 
 	import { observeMany } from 'svelte-extras';
 
@@ -68,13 +61,20 @@
 				imageChangeInterval: 1 * 60 * 1000
 			};
 		},
-		preload({ params: { track_id }}) {
-			const track = tracks.find(t => t.id === Number(track_id));
+		preload({ params: { tracklist_id, track_id }}) {
+			// These ==s are intentional, strings and numbers should both work
+
+			// eslint-disable-next-line eqeqeq
+			const tracklist = tracklists.find(t => t.id == tracklist_id);
+			// eslint-disable-next-line eqeqeq
+			const track = tracklist.tracks.find(t => t.id == track_id);
 			track.imagesIndex = track.images
 				? Math.floor(Math.random() * track.images.length)
 				: 0;
 
-			return track;
+			return Object.assign(track, {
+				tracklist
+			});
 		},
 		oncreate() {
 			this.observeMany(
@@ -120,8 +120,7 @@
 		components: {
 			Layout,
 			AudioPlayer,
-			Backdrop,
-			FeatherIcon
+			Backdrop
 		}
 	};
 </script>

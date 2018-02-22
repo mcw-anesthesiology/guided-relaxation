@@ -1,0 +1,120 @@
+[
+	{
+		"id": "relaxation",
+		"name": "Relaxation",
+		"tracks": [
+			{
+				"id": 1,
+				"name": "Introduction",
+				"path": "/tracks/Relaxation/1 - Introduction.mp3"
+			},
+			{
+				"id": 2,
+				"name": "Breathing Exercises",
+				"path": "/tracks/Relaxation/2 - Breathing Exercises.mp3"
+			},
+			{
+				"id": 3,
+				"name": "Brief Relaxation Meditation",
+				"path": "/tracks/Relaxation/3 - Brief Relaxation Meditation.mp3"
+			},
+			{
+				"id": 4,
+				"name": "Self Relaxation",
+				"path": "/tracks/Relaxation/4 - Self Relaxation.mp3"
+			},
+			{
+				"id": 5,
+				"name": "An Entertaining Relaxing Experience",
+				"path": "/tracks/Relaxation/5 - An Entertaining Relaxing Experience.mp3"
+			}
+		]
+	},
+	{
+		"id": "expressive-sensory-meditation",
+		"name": "Expressive and Sensory Meditation",
+		"tracks": [
+			{
+				"id": 1,
+				"name": "Introduction",
+				"path": "/tracks/Expressive and Sensory Meditation/1 - Introduction.mp3"
+			},
+			{
+				"id": 2,
+				"name": "Two Minute Expressive Meditation",
+				"path": "/tracks/Expressive and Sensory Meditation/2 - Two Minute Expressive Meditation.mp3"
+			},
+			{
+				"id": 3,
+				"name": "Four Minute Expressive Meditation",
+				"path": "/tracks/Expressive and Sensory Meditation/3 - Four Minute Expressive Meditation.mp3"
+			},
+			{
+				"id": 4,
+				"name": "Expressive Meditation for Twelve Minutes",
+				"path": "/tracks/Expressive and Sensory Meditation/4 - Expressive Meditation for Twelve Minutes.mp3"
+			},
+			{
+				"id": 5,
+				"name": "Sensory Mindfulness Practice",
+				"path": "/tracks/Expressive and Sensory Meditation/5 - Sensory Mindfulness Practice.mp3"
+			}
+		]
+	},
+	{
+		"id": "misc",
+		"name": "Miscellaneous",
+		"tracks": [
+			{
+				"id": "autogenic",
+				"name": "Autogenic Relaxation",
+				"path": "/tracks/Autogenic Relaxation.mp3"
+			},
+			{
+				"id": "forest",
+				"name": "Forest",
+				"path": "/tracks/Forest.mp3",
+				"images": [
+					{
+						"src": "https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39f97e57883191fcc60db11e46e6eb9c&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+						"srcset": "https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39f97e57883191fcc60db11e46e6eb9c&auto=format&fit=crop&w=667&q=80 667w, https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39f97e57883191fcc60db11e46e6eb9c&auto=format&fit=crop&w=967&q=80 967w, https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39f97e57883191fcc60db11e46e6eb9c&auto=format&fit=crop&w=1267&q=80 1267w, https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39f97e57883191fcc60db11e46e6eb9c&auto=format&fit=crop&w=1334&q=80 1334w, https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39f97e57883191fcc60db11e46e6eb9c&auto=format&fit=crop&w=1567&q=80 1567w, https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39f97e57883191fcc60db11e46e6eb9c&auto=format&fit=crop&w=1867&q=80 1867w, https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39f97e57883191fcc60db11e46e6eb9c&auto=format&fit=crop&w=1934&q=80 1934w"
+					},
+					{
+						"src": "https://images.unsplash.com/photo-1505567745926-ba89000d255a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9712530090ee856b63852ed89fabb2c7&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+						"srcset": "https://images.unsplash.com/photo-1505567745926-ba89000d255a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9712530090ee856b63852ed89fabb2c7&auto=format&fit=crop&w=751&q=80 751w, https://images.unsplash.com/photo-1505567745926-ba89000d255a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9712530090ee856b63852ed89fabb2c7&auto=format&fit=crop&w=1051&q=80 1051w, https://images.unsplash.com/photo-1505567745926-ba89000d255a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9712530090ee856b63852ed89fabb2c7&auto=format&fit=crop&w=1351&q=80 1351w, https://images.unsplash.com/photo-1505567745926-ba89000d255a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9712530090ee856b63852ed89fabb2c7&auto=format&fit=crop&w=1502&q=80 1502w, https://images.unsplash.com/photo-1505567745926-ba89000d255a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9712530090ee856b63852ed89fabb2c7&auto=format&fit=crop&w=1651&q=80 1651w, https://images.unsplash.com/photo-1505567745926-ba89000d255a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9712530090ee856b63852ed89fabb2c7&auto=format&fit=crop&w=1951&q=80 1951w"
+					},
+					{
+						"src": "https://images.unsplash.com/photo-1440074121584-e4acb8b6e954?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eea18179f1606a39ef7707b9c25a7670&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+						"srcset": "https://images.unsplash.com/photo-1440074121584-e4acb8b6e954?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eea18179f1606a39ef7707b9c25a7670&auto=format&fit=crop&w=750&q=80 750w, https://images.unsplash.com/photo-1440074121584-e4acb8b6e954?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eea18179f1606a39ef7707b9c25a7670&auto=format&fit=crop&w=1050&q=80 1050w, https://images.unsplash.com/photo-1440074121584-e4acb8b6e954?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eea18179f1606a39ef7707b9c25a7670&auto=format&fit=crop&w=1350&q=80 1350w, https://images.unsplash.com/photo-1440074121584-e4acb8b6e954?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eea18179f1606a39ef7707b9c25a7670&auto=format&fit=crop&w=1500&q=80 1500w, https://images.unsplash.com/photo-1440074121584-e4acb8b6e954?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eea18179f1606a39ef7707b9c25a7670&auto=format&fit=crop&w=1650&q=80 1650w, https://images.unsplash.com/photo-1440074121584-e4acb8b6e954?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eea18179f1606a39ef7707b9c25a7670&auto=format&fit=crop&w=1950&q=80 1950w"
+					},
+					{
+						"alt": "A thickly wooded forest of tall, green pine trees with a sunset filtering through the leaves",
+						"src": "https://images.unsplash.com/photo-1448234033678-91c13d8cbbad?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b7d9f66290f70456741e2bc389ad30e0&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+						"srcset": "https://images.unsplash.com/photo-1448234033678-91c13d8cbbad?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b7d9f66290f70456741e2bc389ad30e0&auto=format&fit=crop&w=752&q=80 752w, https://images.unsplash.com/photo-1448234033678-91c13d8cbbad?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b7d9f66290f70456741e2bc389ad30e0&auto=format&fit=crop&w=1052&q=80 1052w, https://images.unsplash.com/photo-1448234033678-91c13d8cbbad?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b7d9f66290f70456741e2bc389ad30e0&auto=format&fit=crop&w=1352&q=80 1352w, https://images.unsplash.com/photo-1448234033678-91c13d8cbbad?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b7d9f66290f70456741e2bc389ad30e0&auto=format&fit=crop&w=1504&q=80 1504w, https://images.unsplash.com/photo-1448234033678-91c13d8cbbad?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b7d9f66290f70456741e2bc389ad30e0&auto=format&fit=crop&w=1652&q=80 1652w, https://images.unsplash.com/photo-1448234033678-91c13d8cbbad?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b7d9f66290f70456741e2bc389ad30e0&auto=format&fit=crop&w=1952&q=80 1952w"
+					}
+				]
+			},
+			{
+				"id": "meadow",
+				"name": "Meadow",
+				"path": "/tracks/Meadow.mp3",
+				"images": [
+					{
+						"alt": "A cluster of small bell-shaped flowers rising up above the grass in a sunny meadow",
+						"src": "https://images.unsplash.com/photo-1469881317953-097ae79770ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=021bd705da31106e1d61744eb70dfafd&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+						"srcset": "https://images.unsplash.com/photo-1469881317953-097ae79770ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=021bd705da31106e1d61744eb70dfafd&auto=format&fit=crop&w=750&q=80 750w, https://images.unsplash.com/photo-1469881317953-097ae79770ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=021bd705da31106e1d61744eb70dfafd&auto=format&fit=crop&w=1050&q=80 1050w, https://images.unsplash.com/photo-1469881317953-097ae79770ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=021bd705da31106e1d61744eb70dfafd&auto=format&fit=crop&w=1350&q=80 1350w, https://images.unsplash.com/photo-1469881317953-097ae79770ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=021bd705da31106e1d61744eb70dfafd&auto=format&fit=crop&w=1500&q=80 1500w, https://images.unsplash.com/photo-1469881317953-097ae79770ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=021bd705da31106e1d61744eb70dfafd&auto=format&fit=crop&w=1650&q=80 1650w, https://images.unsplash.com/photo-1469881317953-097ae79770ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=021bd705da31106e1d61744eb70dfafd&auto=format&fit=crop&w=1950&q=80 1950w"
+					},
+					{
+						"alt": "A meadow full of orange tulips with a mountain range on the horizon",
+						"src": "https://images.unsplash.com/photo-1490559840126-62d6b92d7a9f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4491901a87a1976b6baec4a56bcd4abd&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+						"srcset": "https://images.unsplash.com/photo-1490559840126-62d6b92d7a9f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4491901a87a1976b6baec4a56bcd4abd&auto=format&fit=crop&w=750&q=80 750w, https://images.unsplash.com/photo-1490559840126-62d6b92d7a9f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4491901a87a1976b6baec4a56bcd4abd&auto=format&fit=crop&w=1050&q=80 1050w, https://images.unsplash.com/photo-1490559840126-62d6b92d7a9f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4491901a87a1976b6baec4a56bcd4abd&auto=format&fit=crop&w=1350&q=80 1350w, https://images.unsplash.com/photo-1490559840126-62d6b92d7a9f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4491901a87a1976b6baec4a56bcd4abd&auto=format&fit=crop&w=1500&q=80 1500w, https://images.unsplash.com/photo-1490559840126-62d6b92d7a9f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4491901a87a1976b6baec4a56bcd4abd&auto=format&fit=crop&w=1650&q=80 1650w, https://images.unsplash.com/photo-1490559840126-62d6b92d7a9f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4491901a87a1976b6baec4a56bcd4abd&auto=format&fit=crop&w=1950&q=80 1950w"
+					},
+					{
+						"src": "https://images.unsplash.com/photo-1463743981180-c90485a4f274?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ee77001703655147a686b58cc5e25ec2&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+						"srcset": "https://images.unsplash.com/photo-1463743981180-c90485a4f274?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ee77001703655147a686b58cc5e25ec2&auto=format&fit=crop&w=753&q=80 753w, https://images.unsplash.com/photo-1463743981180-c90485a4f274?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ee77001703655147a686b58cc5e25ec2&auto=format&fit=crop&w=1053&q=80 1053w, https://images.unsplash.com/photo-1463743981180-c90485a4f274?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ee77001703655147a686b58cc5e25ec2&auto=format&fit=crop&w=1353&q=80 1353w, https://images.unsplash.com/photo-1463743981180-c90485a4f274?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ee77001703655147a686b58cc5e25ec2&auto=format&fit=crop&w=1506&q=80 1506w, https://images.unsplash.com/photo-1463743981180-c90485a4f274?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ee77001703655147a686b58cc5e25ec2&auto=format&fit=crop&w=1653&q=80 1653w, https://images.unsplash.com/photo-1463743981180-c90485a4f274?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ee77001703655147a686b58cc5e25ec2&auto=format&fit=crop&w=1953&q=80 1953w"
+					}
+				]
+			}
+		]
+	}
+]

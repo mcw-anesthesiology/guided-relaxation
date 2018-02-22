@@ -1,34 +1,26 @@
 <:Head>
-	<title>Guided relaxation</title>
+	<title>{{name}} - Guided relaxation</title>
 </:Head>
 
-<Layout page="home">
+<Layout page="tracklist">
 	<Backdrop />
-	<Header heading="Guided relaxation" />
+	<Header />
 
-	<div class="tracklists">
-		{{#each tracklists as tracklist}}
-			<Tracklist id="{{tracklist.id}}"
-				name="{{tracklist.name}}"
-				tracks="{{tracklist.tracks}}" />
-		{{/each}}
+	<div class="tracklist-container">
+		<Tracklist :id :name :tracks />
 	</div>
 </Layout>
 
 <style>
-	:global(main[data-page="home"]) {
+	:global(main[data-page="tracklist"]) {
 		box-sizing: border-box;
 		padding-left: 3em;
 		padding-right: 3em;
 	}
 
-	.tracklists {
+	.tracklist-container {
 		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
 		justify-content: center;
-		padding-left: -2em;
-		padding-right: -2em;
 	}
 </style>
 
@@ -41,10 +33,13 @@
 	import tracklists from '@assets/tracklists.json';
 
 	export default {
-		data() {
-			return {
-				tracklists
-			};
+		preload({ params: { tracklist_id } }) {
+			// These ==s are intentional, strings and numbers should both work
+
+			// eslint-disable-next-line eqeqeq
+			const tracklist = tracklists.find(t => t.id == tracklist_id);
+
+			return tracklist;
 		},
 		components: {
 			Layout,

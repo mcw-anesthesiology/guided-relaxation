@@ -1,0 +1,35 @@
+<header>
+	<img src="/pain-medicine.svg"
+		alt="Medical College of Wisconsin Pain Medicine"
+		width="150" height="150" />
+
+	<slot>
+		<h1>{{heading}}</h1>
+	</slot>
+</header>
+
+<style>
+	header {
+		padding: 2em;
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	h1 {
+		margin: 2em 0.5em;
+		color: white;
+	}
+</style>
+
+<script>
+	export default {
+		data() {
+			return {
+				heading: 'Guided relaxation'
+			};
+		}
+	};
+</script>
