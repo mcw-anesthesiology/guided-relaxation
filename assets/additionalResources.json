@@ -1,0 +1,106 @@
+{
+	"Websites": [
+		{
+			"name": "Palouse Mindfulness",
+			"url": "https://palousemindfulness.com/",
+			"description": "Provides body scans (both 20 and 30 minutes in duration) as well as additional guided meditations and a full mindfulness-based stress reduction course."
+		},
+		{
+			"name": "Dr Weil",
+			"url": "https://www.drweil.com",
+			"description": "Dr. Weil is a recognized expert in integrated medicine and has a number of helpful links."
+		},
+		{
+			"name": "WebMD",
+			"url": "https://www.webmd.com/sleep-disorders/default.htm",
+			"description": "Offers information and tips to improve sleep."
+		},
+		{
+			"name": "Retrain Pain Foundation",
+			"url": "https://www.retrainpain.org/",
+			"description": "Very interesting and informative site to gain more understanding of pain and treatment options."
+		},
+		{
+			"name": "National Institute of Neurological Disorders and Stroke",
+			"url": "https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Understanding-Sleep",
+			"description": "NIH provided information about sleep and tips to improve sleep."
+		},
+		{
+			"name": "American Chronic Pain Association",
+			"url": "https://www.theacpa.org/",
+			"description": "The American Chronic Pain Association provides pain education and pain management resources."
+		},
+		{
+			"name": "US Pain Foundation",
+			"url": "https://uspainfoundation.org/",
+			"description": "The U.S. Pain Foundation serves those living with chronic pain and their caregivers by providing education and resources."
+		},
+		{
+			"name": "Gratefulness",
+			"url": "https://gratefulness.org/",
+			"description": "Positive approaches to dealing with adversity."
+		},
+		{
+			"name": "The Mighty",
+			"url": "http://themighty.com",
+			"description": "Online health community that strives to inform and connect people with a wide variety of health concerns."
+		}
+	],
+	"Apps of interest": [
+		{
+			"name": "Headspace",
+			"url": "https://www.headspace.com/headspace-meditation-app",
+			"description": "Free trial consists of 10 recordings of guided meditation."
+		},
+		{
+			"name": "Calm",
+			"url": "https://www.calm.com/",
+			"description": "Free app with guided meditation and breathing exercises; has an interesting sleep stories section."
+		},
+		{
+			"name": "Breathe2Relax",
+			"description": "Free app with guided meditation and breathing exercises."
+		},
+		{
+			"name": "iHeadache",
+			"url": "http://www.iheadache.com/",
+			"description": "Having already existed in online form, the iHeadache mobile app debuted on the App Store in early 2016. Designed by a neurologist, the app also creates reports designed specifically to help a doctor identify headache triggers and effective treatment methods."
+		},
+		{
+			"name": "Sleep Cycle",
+			"url": "https://www.sleepcycle.com/",
+			"description": "Features a patented technology that can track and evaluate your sleep patterns using sound or vibration analysis. The app then uses the data to generate graphs and reports to help you visualize your sleep cycles. It can also wake you at the optimal time so you feel less groggy during the day."
+		}
+	],
+	"YouTube videos and searches of interest": [
+		{
+			"name": "Jon Kabat-Zinn mindfulness",
+			"url": "https://www.youtube.com/results?search_query=Jon+Kabat-Zinn+mindfulness",
+			"description": "Videos range from 10-40 minutes of guided meditations, body scans, etc."
+		},
+		{
+			"name": "Stephen Cope",
+			"url": "https://www.youtube.com/results?search_query=Stephen+Cope",
+			"description": "For deep relaxation, body scans, and focusing attention."
+		},
+		{
+			"name": "Andy Puddicombe",
+			"url": "https://www.youtube.com/results?search_query=Andy+Puddicombe",
+			"description": "Founder of Headspace app"
+		},
+		{
+			"name": "Stop Anxiety 4-7-8 Calm Breathing Guide",
+			"url": "https://www.youtube.com/results?search_query=Stop+Anxiety+4-7-8+Calm+Breathing+Guide"
+		},
+		{
+			"name": "Easy TaiChi",
+			"url": "https://www.youtube.com/watch?v=ZxcNBejxlzs",
+			"description": "Join in a 9-minute daily practice"
+		},
+		{
+			"name": "Five Minute Mindfulness Meditation for Chronic Pain Management",
+			"url": "https://www.youtube.com/results?search_query=Five+Minute+Mindfulness+Meditation+for+Chronic+Pain+Management",
+			"description": "Guided meditation with photos of nature."
+		}
+	]
+}

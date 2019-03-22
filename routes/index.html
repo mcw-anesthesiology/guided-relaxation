@@ -13,6 +13,8 @@
 				tracks="{{tracklist.tracks}}" />
 		{{/each}}
 	</div>
+
+	<AdditionalResources resources="{{additionalResources}}" />
 </Layout>
 
 <style>
@@ -37,20 +39,24 @@
 	import Backdrop from '@/components/Backdrop.html';
 	import Header from '@/components/Header.html';
 	import Tracklist from '@/components/Tracklist.html';
+	import AdditionalResources from '@/components/AdditionalResources.html';
 
 	import tracklists from '@assets/tracklists.json';
+	import additionalResources from '@assets/additionalResources.json';
 
 	export default {
 		data() {
 			return {
-				tracklists
+				tracklists,
+				additionalResources
 			};
 		},
 		components: {
 			Layout,
 			Backdrop,
 			Header,
-			Tracklist
+			Tracklist,
+			AdditionalResources
 		}
 	};
 </script>

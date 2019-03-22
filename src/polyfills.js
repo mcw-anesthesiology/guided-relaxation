@@ -1,0 +1,1 @@
+import 'details-element-polyfill';

@@ -1,0 +1,29 @@
+<li>
+	{{#if resource.url}}
+		<a href="{{resource.url}}" class="name">
+			{{resource.name || resource.url}}
+		</a>
+	{{else}}
+		<span class="name">{{resource.name}}</span>
+	{{/if}}
+
+	{{#if resource.description}}
+		<p>{{resource.description}}</p>
+	{{/if}}
+</li>
+
+<style>
+	li ~ :global(li) {
+		margin-top: 1em;
+	}
+	.name {
+		display: block;
+		font-size: 1.1em;
+		font-weight: 400;
+		margin-bottom: 0.5em;
+	}
+
+	p {
+		margin: 0;
+	}
+</style>

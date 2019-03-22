@@ -1,0 +1,58 @@
+<details>
+	<summary>Additional resources</summary>
+
+	{{#each Array.from(Object.entries(resources)) as [type, typeResources]}}
+		<section>
+			<h2>{{type}}</h2>
+			<ul>
+				{{#each typeResources as resource}}
+					<OutsideResource resource="{{resource}}" />
+				{{/each}}
+			</ul>
+		</section>
+	{{/each}}
+</details>
+
+<style>
+	details {
+		margin: 2em;
+		padding: 2em;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	summary {
+		cursor: pointer;
+	}
+
+	section {
+		margin: 1em;
+		padding: 2em;
+		border-radius: 4px;
+		background: #eee;
+		color: #333;
+	}
+
+	h2 {
+		margin-top: 0;
+	}
+
+	ul {
+		padding-left: 1em;
+	}
+</style>
+
+<script>
+	import OutsideResource from './OutsideResource.html';
+
+	export default {
+		data() {
+			return {
+				resources: []
+			};
+		},
+		components: {
+			OutsideResource
+		}
+	};
+</script>
