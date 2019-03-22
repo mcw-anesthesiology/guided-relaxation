@@ -7,7 +7,7 @@
     "watch": "sapper dev",
     "build": "NODE_ENV=production sapper export && mkdir dist/assets && mv dist/build dist/assets/build && sed -i \"s/<script src='\\/client\\/..\\/..\\/assets\\/build\\/main.css'><\\/script>//\" dist/index.html",
     "rm": "rm -rf .sapper/ && rm -rf app/manifest && rm -rf assets/build/ && rm -f templates/.main.rendered.js",
-    "deploy": "now dist/ -A ../now.json"
+    "deploy": "yarn build && now dist/ -A ../now.json"
   },
   "dependencies": {
     "compression": "^1.7.1",
