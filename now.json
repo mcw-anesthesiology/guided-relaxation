@@ -1,6 +1,8 @@
 {
-	"version": 1,
+	"version": 2,
 	"name": "guided-relaxation",
-	"type": "static",
-	"alias": "guided-relaxation.mcw-anesthesiology.tech"
+	"alias": "guided-relaxation.mcw-anesthesiology.tech",
+	"builds": [
+		{"src": "package.json", "use": "@now/static-build"}
+	]
 }
