@@ -78,6 +78,41 @@
 	],
 	"YouTube videos and searches of interest": [
 		{
+			"name": "Meditation: Addressing Pain",
+			"url": "https://www.youtube.com/watch?v=GqUQv0DfARg",
+			"description": "A brief explanation of the impact of mindfulness on pain"
+		},
+		{
+			"name": "Mindfulness Animated in 3 minutes",
+			"url": "https://www.youtube.com/watch?v=mjtfyuTTQFY",
+			"description": "A brief animation about how to meditate"
+		},
+		{
+			"name": "Breathing Meditation",
+			"url": "https://www.youtube.com/watch?v=YFSc7Ck0Ao0",
+			"description": "A 5 minute mindfulness exercise from the UCLA Mindfulness Awareness Research Center"
+		},
+		{
+			"name": "Mindfulness Guided Meditation",
+			"url": "https://www.youtube.com/watch?v=dEzbdLn2bJc",
+			"description": "A 5 minute guided meditation with Dr. Robert E. Dinenberg"
+		},
+		{
+			"name": "Guided 10-minute Meditation with Andy Puddicombe",
+			"url": "https://www.youtube.com/watch?v=oVzTnS_IONU",
+			"description": "A 10 minute guided meditation with Andy Puddicome from the Headspace app"
+		},
+		{
+			"name": "Mindfulness Meditation - Guided 10 Minutes",
+			"url": "https://www.youtube.com/watch?v=6p_yaNFSYao",
+			"description": "A 10 minute guided meditation with The Honest Guys"
+		},
+		{
+			"name": "10 Minute Mindfulness Meditation",
+			"url": "https://www.youtube.com/watch?v=ZToicYcHIOU",
+			"description": "A 10 minute meditation from The Daily Calm app"
+		},
+		{
 			"name": "Jon Kabat-Zinn mindfulness",
 			"url": "https://www.youtube.com/results?search_query=Jon+Kabat-Zinn+mindfulness",
 			"description": "Videos range from 10-40 minutes of guided meditations, body scans, etc."
