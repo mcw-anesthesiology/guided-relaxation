@@ -141,5 +141,52 @@
 			"url": "https://www.youtube.com/results?search_query=Five+Minute+Mindfulness+Meditation+for+Chronic+Pain+Management",
 			"description": "Guided meditation with photos of nature."
 		}
+	],
+	"CBT-CP resources": [
+		{
+			"name": "Cognitive behavioral therapy for chronic pain (CBT-CP)",
+			"url": "/resources/cbt-cp model.pdf",
+			"description": "Chronic pain may result in patterns of negative thoughts, feelings, and behaviors, which can, in turn, worsen the pain condition! The goal of CBT-CP is to target these maladaptive patterns in thinking and behaving so that alternative, more adaptive, pain coping skills can be learned."
+		},
+		{
+			"name": "Catching ANTs",
+			"url": "/resources/ANTs.pdf",
+			"description": "When you get upset, you often have negative thoughts. These thoughts may happen automatically and worsen your pain and negative mood. You can feel better physically and emotionally by catching ANTs when they occur, noticing how they make you feel, and challenging them with a more balanced thought."
+		},
+		{
+			"name": "Pain thoughts",
+			"url": "/resources/ANT types.pdf",
+			"description": "Thinking about how much pain you are in does not help you cope with the pain. As pain increases, thoughts may become more negative; as thoughts become more negative, pain often increases further."
+		},
+		{
+			"name": "Factors that impact pain",
+			"url": "/resources/biopsychosocial model.pdf",
+			"description": "Chronic pain touches many parts of your life, and each piece affects others. While some factors may increase or turn the volume up on pain, other factors may decrease it. And you can decide how to manage many of these factors."
+		},
+		{
+			"name": "The chronic pain cycle",
+			"url": "/resources/chronic pain cycle.pdf",
+			"description": "Many with chronic pain fear that movement will increase pain or cause physical damage/injury. This often leads a decrease in activities, which leads to physical deconditioning (e.g., less strength and stamina, weight gain). Dealing with constant pain may also lead to negative thoughts and emotions such as frustration and depression. All of these factors contribute to increased avoidance of people and activities."
+		},
+		{
+			"name": "Coping statements",
+			"url": "/resources/coping statements.pdf",
+			"description": "Some statements that can be used to replace unhelpful thoughts."
+		},
+		{
+			"name": "Pacing activities",
+			"url": "/resources/overactivity.pdf",
+			"description": "Engaging in a moderate, safe level of activity on a regular basis is how to avoid the overactivity cycle. Using the skill of pacing, where time is the guide for activity engagement, can be a helpful strategy. Pacing is about balancing activities, planning ahead, and working “smarter not harder.”"
+		},
+		{
+			"name": "Pacing log",
+			"url": "/resources/pacing log.pdf",
+			"description": "Estimate how long you can safely do one of your regular activities (e.g., yardwork, dishes) without causing a severe pain flare and set that minus one minute as your “active” goal time for the activity. Approximate the amount of “resting” time you will need in order to safely resume activity or continue your day."
+		},
+		{
+			"name": "Progressive muscle relaxation",
+			"url": "/resources/PMR.pdf",
+			"description": "A series of easy to follow steps to relax your entire body."
+		}
 	]
 }
