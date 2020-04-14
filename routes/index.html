@@ -20,17 +20,25 @@
 <style>
 	:global(main[data-page="home"]) {
 		box-sizing: border-box;
+		width: 100%;
 		padding-left: 3em;
 		padding-right: 3em;
 	}
 
 	.tracklists {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		padding-left: -2em;
-		padding-right: -2em;
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+	@media (min-width: 768px) {
+		.tracklists {
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			padding-left: -2em;
+			padding-right: -2em;
+		}
 	}
 </style>
 

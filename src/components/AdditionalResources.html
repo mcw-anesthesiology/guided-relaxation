@@ -1,4 +1,4 @@
-<section>
+<section class="additional-resources">
 	<h2>Additional resources</h2>
 
 	{{#each Array.from(Object.entries(resources)) as [type, typeResources]}}
@@ -14,15 +14,8 @@
 </section>
 
 <style>
-	details {
-		margin: 2em;
-		padding: 2em;
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	summary {
-		cursor: pointer;
+	.additional-resources {
+		margin-top: 3em;
 	}
 
 	section > section {
