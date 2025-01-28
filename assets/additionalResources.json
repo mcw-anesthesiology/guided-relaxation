@@ -36,7 +36,7 @@
 			"description": "The U.S. Pain Foundation serves those living with chronic pain and their caregivers by providing education and resources."
 		},
 		{
-			"name": "Gratefulness",
+			"name": "Greatful Living",
 			"url": "https://gratefulness.org/",
 			"description": "Positive approaches to dealing with adversity."
 		},
@@ -64,11 +64,6 @@
 		{
 			"name": "Breathe2Relax",
 			"description": "Free app with guided meditation and breathing exercises."
-		},
-		{
-			"name": "iHeadache",
-			"url": "http://www.iheadache.com/",
-			"description": "Having already existed in online form, the iHeadache mobile app debuted on the App Store in early 2016. Designed by a neurologist, the app also creates reports designed specifically to help a doctor identify headache triggers and effective treatment methods."
 		},
 		{
 			"name": "Sleep Cycle",
@@ -146,12 +141,12 @@
 		{
 			"name": "Cognitive behavioral therapy for chronic pain (CBT-CP)",
 			"url": "/resources/cbt-cp model.pdf",
-			"description": "Chronic pain may result in patterns of negative thoughts, feelings, and behaviors, which can, in turn, worsen the pain condition! The goal of CBT-CP is to target these maladaptive patterns in thinking and behaving so that alternative, more adaptive, pain coping skills can be learned."
+			"description": "Chronic pain may result in patterns of negative thoughts, feelings, and behaviors, which can, in turn, worsen the pain condition. The goal of CBT-CP is to target these maladaptive patterns in thinking and behaving so that alternative, more adaptive, pain coping skills can be learned."
 		},
 		{
 			"name": "Catching ANTs",
 			"url": "/resources/ANTs.pdf",
-			"description": "When you get upset, you often have negative thoughts. These thoughts may happen automatically and worsen your pain and negative mood. You can feel better physically and emotionally by catching ANTs when they occur, noticing how they make you feel, and challenging them with a more balanced thought."
+			"description": "When we get upset, we often have negative thoughts. These thoughts may happen automatically and worsen pain and negative mood. We can feel better physically and emotionally by catching ANTs when they occur, noticing how they make us feel, and challenging them with a more balanced thought."
 		},
 		{
 			"name": "Pain thoughts",
@@ -166,7 +161,7 @@
 		{
 			"name": "The chronic pain cycle",
 			"url": "/resources/chronic pain cycle.pdf",
-			"description": "Many with chronic pain fear that movement will increase pain or cause physical damage/injury. This often leads a decrease in activities, which leads to physical deconditioning (e.g., less strength and stamina, weight gain). Dealing with constant pain may also lead to negative thoughts and emotions such as frustration and depression. All of these factors contribute to increased avoidance of people and activities."
+			"description": "Many with chronic pain fear that movement will increase pain or cause physical damage/injury. This often leads to a decrease in activities, which leads to physical deconditioning (e.g., less strength and stamina, weight gain). Dealing with constant pain may also lead to negative thoughts and emotions such as frustration and depression. All of these factors contribute to increased avoidance of people and activities."
 		},
 		{
 			"name": "Coping statements",
