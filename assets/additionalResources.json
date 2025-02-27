@@ -11,6 +11,11 @@
 			"description": "Dr. Weil is a recognized expert in integrated medicine and has a number of helpful links."
 		},
 		{
+			"name": "UCLA Mindful Awareness Research Center",
+			"url": "https://www.uclahealth.org/marc/mindful-meditation",
+			"description": "Provides 8 free guided meditations and additional resources, articles, and tips for effective meditating."
+		},
+		{
 			"name": "WebMD",
 			"url": "https://www.webmd.com/sleep-disorders/default.htm",
 			"description": "Offers information and tips to improve sleep."
@@ -23,31 +28,17 @@
 		{
 			"name": "National Institute of Neurological Disorders and Stroke",
 			"url": "https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Understanding-Sleep",
-			"description": "NIH provided information about sleep and tips to improve sleep."
+			"description": "NIH-provided information about sleep and tips to improve sleep."
 		},
 		{
-			"name": "American Chronic Pain Association",
-			"url": "https://www.theacpa.org/",
+			"name": "The ACPA and Stanford Resource Guide to Chronic Pain Management",
+			"url": "https://www.acpanow.com/acpa-stanford-guide.html#/",
 			"description": "The American Chronic Pain Association provides pain education and pain management resources."
 		},
 		{
-			"name": "US Pain Foundation",
-			"url": "https://uspainfoundation.org/",
-			"description": "The U.S. Pain Foundation serves those living with chronic pain and their caregivers by providing education and resources."
-		},
-		{
-			"name": "Grateful Living",
-			"url": "https://gratefulness.org/",
-			"description": "Positive approaches to dealing with adversity."
-		},
-		{
-			"name": "The Mighty",
-			"url": "http://themighty.com",
-			"description": "Online health community that strives to inform and connect people with a wide variety of health concerns."
-		},
-		{
-			"name": "UCLA Mindful Awareness Research Center",
-			"url": "https://www.uclahealth.org/marc/"
+			"name": "Dr. Rachel Zoffness",
+			"url": "https://www.zoffness.com/resources",
+			"description": "A compilation of useful pain management resources from pain psychologist, Rachel Zoffness, Ph.D."
 		}
 	],
 	"Apps of interest": [
@@ -69,6 +60,25 @@
 			"name": "Sleep Cycle",
 			"url": "https://www.sleepcycle.com/",
 			"description": "Features a patented technology that can track and evaluate your sleep patterns using sound or vibration analysis. The app then uses the data to generate graphs and reports to help you visualize your sleep cycles. It can also wake you at the optimal time so you feel less groggy during the day."
+		},
+		{
+			"name": "WebMD: Symptom Checker",
+			"description": "A free app that allows users to locate pain on their body, keep a diary of symptoms and triggers, and print customized reports that can be shared with providers."
+		},
+		{
+			"name": "Pain Coach",
+			"url": "https://mobile.va.gov/app/pain-coach",
+			"description": "An app created by the VA that provides education, support and practice activities to aid pain management."
+		},
+		{
+			"name": "Guava",
+			"url": "https://guavahealth.com/",
+			"description": "A health app that will allow you to track symptoms and identify patterns."
+		},
+		{
+			"name": "Insight Timer",
+			"url": "https://insighttimer.com/",
+			"description": "A free app with guided meditation and breathing exercises."
 		}
 	],
 	"YouTube videos and searches of interest": [
